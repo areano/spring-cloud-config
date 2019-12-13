@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: rabbitmq
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=local
+      - POSTGRES_DB=voodoo-db
