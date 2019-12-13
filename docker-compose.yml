@@ -2,10 +2,12 @@ version: '3.7'
 
 services:
 
-  db:
-    image: rabbitmq
+  rabbitmq:
+    image: rabbitmq:3-management
     ports:
       - 5432:5432
+      - 5672:5672
+      - 15672:15672
     environment:
       - POSTGRES_USER=local
       - POSTGRES_PASSWORD=local
