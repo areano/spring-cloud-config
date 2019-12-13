@@ -20,8 +20,8 @@ public class ClientApplication {
     @Component
     class Scheduler {
 
-        @Value("${app.topic.rms-inbound}")
-        String name = "World";
+        @Value("${info.app.environment}")
+        String name = "dev";
 
         @Scheduled(fixedDelay = 1000)
         void debugProperty() {
@@ -29,6 +29,5 @@ public class ClientApplication {
         }
 
     }
-
 
 }
