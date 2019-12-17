@@ -8,10 +8,6 @@ services:
       - 5432:5432
       - 5672:5672
       - 15672:15672
-    environment:
-      - POSTGRES_USER=local
-      - POSTGRES_PASSWORD=local
-      - POSTGRES_DB=voodoo-db
 
   kafka:
     image: landoop/fast-data-dev
